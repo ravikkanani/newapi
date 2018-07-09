@@ -15,6 +15,9 @@ class Cricbuzz():
 
 
 	def matches(self):
-		info = ['decod']
+			r = requests.get('http://mapps.cricbuzz.com/cbzandroid/2.0/currentmatches.json')
+	#	data = json.dumps(r.json())
+   #     decod=json.load(r.json())
+		info = r.json()
 		return info
 
